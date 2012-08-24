@@ -7,9 +7,12 @@
     <meta name="description" content="Popcorn-js / Learning Registry Integration : Get related learning resources alongside Popcorn videos" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://raw.github.com/SocialCoding4Good/popcorn-js/master/plugins/learningregistry/popcorn.learningregistry.css">
 
     <title>Popcorn-js / Learning Registry Integration</title>
     <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+    <script src="https://raw.github.com/SocialCoding4Good/popcorn-js/master/plugins/learningregistry/popcorn.learningregistry.js"></script>
+    
     <script>
       // ensure the web page (DOM) has loaded
       document.addEventListener("DOMContentLoaded", function () {
@@ -18,18 +21,14 @@
          var pop = Popcorn("#ourvideo");
 
          // add a footnote at 2 seconds, and remove it at 6 seconds
-         pop.footnote({
-           start: 2,
-           end: 4,
-           text: "<a href='http://google.com'>Some link to a learning resource</a><br><a href='http://google.com'>Another link to a learning resource</a>",
-           target: "footnotediv"
-         });
-         pop.footnote({
-           start: 5,
-           text: "<a href='http://google.com'>Yet another link to a learning resource</a>",
-           target: "footnotediv"
-         });
-
+           pop.learningregistry({
+             start: 2,
+             end: 5,
+             target: "learning-registry",
+             keyword: "science",
+             cleanupAtEnd: false,
+             limit: 10
+           });
          // play the video right away
          pop.play();
 
@@ -68,7 +67,7 @@
 			</video>
 			<div style="border: 2px black solid;">
 			<strong>Related Learning Resources</strong>
-    		<div id="footnotediv"></div>
+    		<div id="learning-registry"></div>
     		</div>
     		</p>
 
