@@ -20,8 +20,13 @@
          // add a footnote at 2 seconds, and remove it at 6 seconds
          pop.footnote({
            start: 2,
-           end: 6,
-           text: "Pop!",
+           end: 4,
+           text: "Some link to a learning resource",
+           target: "footnotediv"
+         });
+         pop.footnote({
+           start: 5,
+           text: "Another link to a learning resource",
            target: "footnotediv"
          });
 
@@ -61,7 +66,9 @@
 			  <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.ogv">
 			  <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.webm">
 			</video>
+			<p>Related Learning Resources</p>
     		<div id="footnotediv"></div>
+    		</p>
 
         <h3>Welcome to GitHub Pages.</h3>
 
