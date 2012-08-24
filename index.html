@@ -21,12 +21,12 @@
          pop.footnote({
            start: 2,
            end: 4,
-           text: "Some link to a learning resource",
+           text: "<a href='http://google.com'>Some link to a learning resource</a><br><a href='http://google.com'>Another link to a learning resource</a>",
            target: "footnotediv"
          });
          pop.footnote({
            start: 5,
-           text: "Another link to a learning resource",
+           text: "<a href='http://google.com'>Yet another link to a learning resource</a>",
            target: "footnotediv"
          });
 
@@ -66,8 +66,10 @@
 			  <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.ogv">
 			  <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.webm">
 			</video>
-			<p>Related Learning Resources</p>
+			<div style="border: 2px black solid;">
+			<p style="font: bold">Related Learning Resources</p>
     		<div id="footnotediv"></div>
+    		</div>
     		</p>
 
         <h3>Welcome to GitHub Pages.</h3>
