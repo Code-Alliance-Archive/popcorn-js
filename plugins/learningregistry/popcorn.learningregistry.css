@@ -1,0 +1,20 @@
+.learning-registry-ul {
+	list-style: none;
+	display: block;
+}
+
+.learning-registry-li {
+	list-style: none;
+	display: block;
+}
+
+.learning-registry-span {
+	display: block;
+	position: relative;
+	left: 20px;
+}
+
+
+.learning-registry-li-nowrap {
+	display: inline;
+}
