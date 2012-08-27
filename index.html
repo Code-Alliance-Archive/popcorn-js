@@ -25,10 +25,18 @@
 
          // add a footnote at 2 seconds, and remove it at 6 seconds
            pop.learningregistry({
-             start: 2,
-             end: 5,
+             start: 3,
+             end: 15,
              target: "learning-registry",
-             keyword: "science",
+             keyword: "earth",
+             cleanupAtEnd: false,
+             limit: 10
+           });
+           pop.learningregistry({
+             start: 18,
+             end: 59,
+             target: "learning-registry",
+             keyword: "gravity",
              cleanupAtEnd: false,
              limit: 10
            });
